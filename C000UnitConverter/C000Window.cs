@@ -1,14 +1,21 @@
 namespace C000UnitConverter
 {
+    /// <summary>
+    /// Contains constructor and event methods for Window class
+    /// </summary>
     public partial class C000Window : Form
     {
-       
+        /// <summary>
+        /// Window Constructor
+        /// </summary>
         public C000Window()
         {
             InitializeComponent();
             InitDefaultValues();
             InitEventHandlers();
         }
+
+        #region Event methods
 
         #region Mass
 
@@ -166,6 +173,19 @@ namespace C000UnitConverter
 
         #endregion
 
+        #endregion
+
+        /// <summary>
+        /// Sets correct values to numericupdown boxes
+        /// </summary>
+        /// <param name="val">Value used for calculations</param>
+        /// <param name="i">Index val's unit</param>
+        /// Units
+        /// Mass: Grams, Ounces, Pounds
+        /// Length: Metres, Inches, Feet, Yards, Miles
+        /// Area: Square Metres, Square Inches, Square Feet, Square Yards, Square Miles
+        /// Volume: Cubic Meters, Cubic Inches, Gallons, Cubic Feet, Liters
+        /// Speed: Meters per Second, Kilometers per Hour, Miles per Hour, Feet per Second
         private void NumericUpDownUpdate(decimal val, int i)
         {
             
