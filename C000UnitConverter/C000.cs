@@ -11,12 +11,29 @@ namespace C000UnitConverter
 
         public static decimal[] Calc(decimal val, int i, int q, double exp)
         {
-            if (q == 2 ^ q == 3) exp *= q;
-            if (i == 0 && exp != 1) val *= (decimal)System.Math.Pow(10.0d, exp);
+            //if (q == 2 ^ q == 3) exp *= q;
+            if (i == 0 && exp != 1)
+            {
+                try
+                {
+                    val *= (decimal)System.Math.Pow(10.0d, exp);
+                }
+                catch ( OverflowException e )
+                {
+                    val = decimal.MaxValue;
+                }
+            }
             decimal[] result = new decimal[cf[q].Length];
             for (int j = 0; j < result.Length; j++)
             {
-                result[j] = val * cf[q][i] / cf[q][j];
+                try
+                {
+                    result[j] = val * cf[q][i] / cf[q][j];
+                }
+                catch (OverflowException e)
+                {
+                    result[j] = decimal.MaxValue;
+                }           
             }
             if (exp != 1) result[0] *= (decimal)System.Math.Pow(10.0d, -exp);
             return result;

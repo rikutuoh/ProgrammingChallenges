@@ -6,6 +6,8 @@ namespace C000UnitConverter
         public C000Window()
         {
             InitializeComponent();
+            InitDefaultValues();
+            InitEventHandlers();
         }
 
         #region Mass
