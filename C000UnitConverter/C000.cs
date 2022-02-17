@@ -11,7 +11,7 @@ namespace C000UnitConverter
 
         public static decimal[] Calc(decimal val, int i, int q, double exp)
         {
-            //if (q == 2 ^ q == 3) exp *= q;
+            if (q == 2 ^ q == 3) exp *= q;
             if (i == 0 && exp != 1)
             {
                 try

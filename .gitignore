@@ -1,5 +1,7 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/C000UnitConverter/obj/Release/net6.0-windows
+﻿/.vs/
+/Challenges.sln
+/**/*.csproj
+/**/*.csproj.user
+/**/obj/
+/**/bin/
+/**/Properties/
