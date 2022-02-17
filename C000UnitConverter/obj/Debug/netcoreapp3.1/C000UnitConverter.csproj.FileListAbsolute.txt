@@ -1,7 +1,0 @@
-D:\Challenges\C000UnitConverter\obj\Debug\netcoreapp3.1\C000UnitConverter.csproj.AssemblyReference.cache
-D:\Challenges\C000UnitConverter\obj\Debug\netcoreapp3.1\C000UnitConverter.C000Window.resources
-D:\Challenges\C000UnitConverter\obj\Debug\netcoreapp3.1\C000UnitConverter.csproj.GenerateResource.cache
-D:\Challenges\C000UnitConverter\obj\Debug\netcoreapp3.1\C000UnitConverter.GeneratedMSBuildEditorConfig.editorconfig
-D:\Challenges\C000UnitConverter\obj\Debug\netcoreapp3.1\C000UnitConverter.AssemblyInfoInputs.cache
-D:\Challenges\C000UnitConverter\obj\Debug\netcoreapp3.1\C000UnitConverter.AssemblyInfo.cs
-D:\Challenges\C000UnitConverter\obj\Debug\netcoreapp3.1\C000UnitConverter.csproj.CoreCompileInputs.cache
