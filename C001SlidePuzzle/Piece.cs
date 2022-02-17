@@ -5,21 +5,22 @@ namespace PiecePuzzleGame
     class Piece
     {
         public int Pos { get; set; }
-
         public int CorrectPos { get; set; }
 
         public Rectangle rectangle;
 
+        /// <summary>
+        /// Piece constructor
+        /// </summary>
+        /// <param name="correctPosition">index of correct position</param>
+        /// <param name="position">index of current position</param>
+        /// <param name="point">coordinates of current position</param>
         public Piece(int correctPosition, int position, Point point)
         {
-            CreatePoints();
-
             Pos = position;
             CorrectPos = correctPosition;
 
             rectangle = new Rectangle(point, new Size(90, 90));
-
-
         }
 
         public static Point[] CreatePoints()
@@ -37,10 +38,14 @@ namespace PiecePuzzleGame
                     n++;
                 }
             }
-
             return a;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="point"></param>
+        /// <param name="nPos"></param>
         public void Moveto(Point point, int nPos)
         {
             rectangle.Location = point;

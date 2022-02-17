@@ -9,7 +9,7 @@ namespace PiecePuzzleGame
     [System.ComponentModel.DesignerCategory("")] // Disables the windows forms designer in VS
     public class PiecePuzzleGame : Form
     {
-        private PictureBox pictureBox = new PictureBox();
+        private readonly PictureBox pictureBox = new PictureBox();
 
         private Point[] points = Piece.CreatePoints();
         private Piece[] pieces = new Piece[15];
@@ -23,18 +23,14 @@ namespace PiecePuzzleGame
             SetBounds(0, 0, 425, 450);
             FormBorderStyle = FormBorderStyle.FixedSingle;
 
-
             pictureBox.Size = new Size(410, 420);
             pictureBox.BackColor = Color.Black;
-
             pictureBox.Visible = true;
-
             pictureBox.CreateGraphics();
 
             Controls.Add(pictureBox);
 
             pictureBox.Click += PictureBox_Click;
-
             pictureBox.Paint += PictureBox_Paint;
 
             Scramble();
@@ -52,20 +48,16 @@ namespace PiecePuzzleGame
             {
                 if (piece.rectangle.Contains(PointToClient(Cursor.Position)))
                 {
-
                     if (Math.Abs(piece.Pos - emptyPoint) == 4 || 
                         ((piece.Pos - emptyPoint == 1 && !(piece.Pos == 4 || piece.Pos == 8 || piece.Pos == 12)) 
                         || (piece.Pos - emptyPoint == -1 && !(piece.Pos == 3 || piece.Pos == 7 || piece.Pos == 11))))
                     {
                         int temp = piece.Pos;
-
                         piece.Moveto(points[emptyPoint], emptyPoint);
-
                         emptyPoint = temp;
                     }
                 }
             }
-
             pictureBox.Refresh();
         }
 
@@ -94,7 +86,6 @@ namespace PiecePuzzleGame
             }
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -108,8 +99,11 @@ namespace PiecePuzzleGame
             foreach (Piece piece in pieces)
             {
                 graphics.DrawRectangle(new Pen(Color.White), piece.rectangle);
-                graphics.DrawString($"{piece.CorrectPos + 1}", new Font(FontFamily.GenericSansSerif, 10), Brushes.White, piece.rectangle.Location);
-
+                PointF tpos;
+                if (piece.CorrectPos > 9) tpos = new PointF(piece.rectangle.X + 25, piece.rectangle.Y + 35);
+                else tpos = new PointF(piece.rectangle.X + 35, piece.rectangle.Y + 35);
+                graphics.DrawString($"{piece.CorrectPos + 1}", new Font(FontFamily.GenericSansSerif, 20), Brushes.White, tpos);
+                
             }
         }
 
@@ -120,10 +114,8 @@ namespace PiecePuzzleGame
         {
             for (int i = 0; i < 15; i++)
             {
-                pieces[i] = new(i, i, points[i]);
+                pieces[i] = new Piece(i, i, points[i]);
             }
         }
-
-
     }
 }
