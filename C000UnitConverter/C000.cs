@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace C000UnitConverter
 {
     /// <summary>

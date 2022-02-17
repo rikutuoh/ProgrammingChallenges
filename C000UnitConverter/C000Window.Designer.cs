@@ -1,4 +1,7 @@
-﻿namespace C000UnitConverter
+﻿using System;
+using System.Windows.Forms;
+
+namespace C000UnitConverter
 {
     /// <summary>
     /// Contains Initialization methods for Window class
