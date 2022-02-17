@@ -47,7 +47,7 @@ namespace C000UnitConverter
                 catch (OverflowException e)
                 {
                     result[j] = decimal.MaxValue;
-                }           
+                }
             }
             if (exp != 1) result[0] *= (decimal)System.Math.Pow(10.0d, -exp);
             return result;

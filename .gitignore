@@ -1,6 +1,5 @@
 ﻿/.vs/
 /Challenges.sln
-/**/*.csproj
 /**/*.csproj.user
 /**/obj/
 /**/bin/
