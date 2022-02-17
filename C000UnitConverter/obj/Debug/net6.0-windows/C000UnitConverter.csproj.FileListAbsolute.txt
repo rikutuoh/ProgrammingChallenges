@@ -2,7 +2,6 @@ D:\Challenges\C000UnitConverter\bin\Debug\net6.0-windows\C000UnitConverter.exe
 D:\Challenges\C000UnitConverter\bin\Debug\net6.0-windows\C000UnitConverter.deps.json
 D:\Challenges\C000UnitConverter\bin\Debug\net6.0-windows\C000UnitConverter.runtimeconfig.json
 D:\Challenges\C000UnitConverter\bin\Debug\net6.0-windows\C000UnitConverter.dll
-D:\Challenges\C000UnitConverter\bin\Debug\net6.0-windows\ref\C000UnitConverter.dll
 D:\Challenges\C000UnitConverter\bin\Debug\net6.0-windows\C000UnitConverter.pdb
 D:\Challenges\C000UnitConverter\obj\Debug\net6.0-windows\C000UnitConverter.csproj.AssemblyReference.cache
 D:\Challenges\C000UnitConverter\obj\Debug\net6.0-windows\C000UnitConverter.csproj.GenerateResource.cache
@@ -15,3 +14,4 @@ D:\Challenges\C000UnitConverter\obj\Debug\net6.0-windows\ref\C000UnitConverter.d
 D:\Challenges\C000UnitConverter\obj\Debug\net6.0-windows\C000UnitConverter.pdb
 D:\Challenges\C000UnitConverter\obj\Debug\net6.0-windows\C000UnitConverter.genruntimeconfig.cache
 D:\Challenges\C000UnitConverter\obj\Debug\net6.0-windows\C000UnitConverter.C000Window.resources
+D:\Challenges\C000UnitConverter\obj\Debug\net6.0-windows\refint\C000UnitConverter.dll
