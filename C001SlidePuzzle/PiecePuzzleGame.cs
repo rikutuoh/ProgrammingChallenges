@@ -82,7 +82,7 @@ namespace PiecePuzzleGame
 
             for (int i = 0; i < 15; i++)
             {
-                /*if (!a.Contains(i))*/ emptyPoint = 15;
+                if (!a.Contains(i)) emptyPoint = i;
                 pieces[i].Moveto(points[a[i]], a[i]);
             }
         }
