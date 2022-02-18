@@ -28,9 +28,9 @@ namespace PiecePuzzleGame
             int n = 0;
             Point[] a = new Point[16];
 
-            for (int ix = 0; ix < 4; ix++)
+            for (int iy = 0; iy < 4; iy++)
             {
-                for (int iy = 0; iy < 4; iy++)
+                for (int ix = 0; ix < 4; ix++)
                 {
                     Point point = new Point(ix * 100 + 10, iy * 100 + 10);
 

@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace PiecePuzzleGame
 {
@@ -8,5 +10,6 @@ namespace PiecePuzzleGame
         {
             Application.Run(new PiecePuzzleGame());
         }
+
     }
 }
