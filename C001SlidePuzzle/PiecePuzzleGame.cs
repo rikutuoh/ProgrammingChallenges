@@ -117,5 +117,10 @@ namespace PiecePuzzleGame
                 pieces[i] = new Piece(i, i, points[i]);
             }
         }
+
+        public static void Main()
+        {
+            Application.Run(new PiecePuzzleGame());
+        }
     }
 }
