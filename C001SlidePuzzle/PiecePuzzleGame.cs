@@ -6,6 +6,9 @@ using System.Drawing;
 
 namespace PiecePuzzleGame
 {
+    /// <summary>
+    /// Game class, inherits System.Windows.Forms.Form so also acts as the window
+    /// </summary>
     [System.ComponentModel.DesignerCategory("")] // Disables the windows forms designer in VS
     public class PiecePuzzleGame : Form
     {
@@ -16,6 +19,9 @@ namespace PiecePuzzleGame
 
         int emptyPoint;
 
+        /// <summary>
+        /// Game class constuctor
+        /// </summary>
         public PiecePuzzleGame()
         {
             CreatePieces();
@@ -34,7 +40,6 @@ namespace PiecePuzzleGame
             pictureBox.Paint += PictureBox_Paint;
 
             Scramble();
-
         }
 
         /// <summary>
@@ -63,20 +68,18 @@ namespace PiecePuzzleGame
             pictureBox.Refresh();
         }
 
+
         private void Scramble()
         {
             int[] a = new int[15];
             for (int i = 0; i < a.Length; i++) a[i] = 16;
-
             for (int i = 0; i < 15; i++)
             {
                 int n = 16;
-
                 while (a.Contains(n))
                 {
-                    n = i;//new Random().Next(16);
+                    n = new Random().Next(16);
                 }
-
                 a[i] = n;
             }
 
@@ -88,14 +91,13 @@ namespace PiecePuzzleGame
         }
 
         /// <summary>
-        /// 
+        /// Paints all pieces on the picturebox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void PictureBox_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.Clear(Color.Black);
-
             foreach (Piece piece in pieces)
             {
                 e.Graphics.DrawRectangle(new Pen(Color.White), piece.rectangle);
@@ -103,7 +105,6 @@ namespace PiecePuzzleGame
                 if (piece.CorrectPos > 8) tpos = new PointF(piece.rectangle.X + 25, piece.rectangle.Y + 35);
                 else tpos = new PointF(piece.rectangle.X + 35, piece.rectangle.Y + 35);
                 e.Graphics.DrawString($"{piece.CorrectPos + 1}", new Font(FontFamily.GenericSansSerif, 20), Brushes.White, tpos);
-                
             }
         }
 
@@ -118,6 +119,10 @@ namespace PiecePuzzleGame
             }
         }
 
+
+        /// <summary>
+        /// Starting point
+        /// </summary>
         public static void Main()
         {
             Application.Run(new PiecePuzzleGame());
